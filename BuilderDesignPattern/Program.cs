@@ -57,6 +57,27 @@ namespace BuilderDesignPattern
             car.MaxSpeed = "200 KMPH";
         }
     }
+
+    public class CarBuilder
+    {
+        private readonly IBuilder builder;
+        public CarBuilder(IBuilder builder)
+        {
+            this.builder = builder;
+        }
+
+        public void BuildCar()
+        {
+            this.builder.SetEngineCapacity();
+            this.builder.SetMaxSpeed();
+            this.builder.SetManufacturer();
+        }
+
+        public Car GetCar()
+        {
+            return this.builder.GetCar();
+        }
+    }
     public class Car
     {
         public string EngineCapacity;
@@ -74,6 +95,18 @@ namespace BuilderDesignPattern
         static void Main(string[] args)
         {
             Console.WriteLine("Builder Design Pattern!");
+
+            var carBuilder = new CarBuilder(new VolvoBuilder());
+            carBuilder.BuildCar();
+            var car = carBuilder.GetCar();
+            car.GetCarInfo();
+
+            Console.WriteLine("==============");
+
+            carBuilder = new CarBuilder(new AudiBuilder());
+            carBuilder.BuildCar();
+            car = carBuilder.GetCar();
+            car.GetCarInfo();
         }
     }
 }
