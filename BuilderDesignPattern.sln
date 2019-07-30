@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderDesignPattern", "BuilderDesignPattern\BuilderDesignPattern.csproj", "{8901680E-EF86-43FC-83EC-5AB596802FAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8901680E-EF86-43FC-83EC-5AB596802FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8901680E-EF86-43FC-83EC-5AB596802FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8901680E-EF86-43FC-83EC-5AB596802FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8901680E-EF86-43FC-83EC-5AB596802FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F19265ED-51C6-4C1C-A2AD-FAAA0B7E7C55}
+	EndGlobalSection
+EndGlobal
