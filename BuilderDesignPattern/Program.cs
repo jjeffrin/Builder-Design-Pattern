@@ -2,6 +2,61 @@
 
 namespace BuilderDesignPattern
 {
+    public interface IBuilder
+    {
+        void SetMaxSpeed();
+        void SetManufacturer();
+        void SetEngineCapacity();
+        Car GetCar();
+    }
+
+    public class AudiBuilder : IBuilder
+    {
+        Car car = new Car();
+        public Car GetCar()
+        {
+            return car;
+        }
+
+        public void SetEngineCapacity()
+        {
+            car.EngineCapacity = "3000 CC";
+        }
+
+        public void SetManufacturer()
+        {
+            car.Manufacturer = "Audi";
+        }
+
+        public void SetMaxSpeed()
+        {
+            car.MaxSpeed = "240 KMPH";
+        }
+    }
+
+    public class VolvoBuilder : IBuilder
+    {
+        Car car = new Car();
+        public Car GetCar()
+        {
+            return car;
+        }
+
+        public void SetEngineCapacity()
+        {
+            car.EngineCapacity = "2400 CC";
+        }
+
+        public void SetManufacturer()
+        {
+            car.Manufacturer = "Volvo";
+        }
+
+        public void SetMaxSpeed()
+        {
+            car.MaxSpeed = "200 KMPH";
+        }
+    }
     public class Car
     {
         public string EngineCapacity;
